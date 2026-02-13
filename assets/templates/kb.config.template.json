@@ -1,0 +1,43 @@
+{
+  "project_root": ".",
+  "output_dir": "wiki",
+  "schema_version": "1.0.0",
+  "exclude_paths": [
+    "node_modules",
+    "dist",
+    "skills",
+    ".git"
+  ],
+  "feature_taxonomy": "journey",
+  "priority_rules": {
+    "P0": [
+      "app entry",
+      "routing",
+      "background/content runtime",
+      "main feature pages"
+    ],
+    "P1": [
+      "core hooks",
+      "domain orchestration",
+      "prompt/decision core logic"
+    ],
+    "P2": [
+      "support utilities",
+      "ui primitives",
+      "tooling scripts",
+      "mock runtime support"
+    ],
+    "P3": [
+      "docs",
+      "configs",
+      "styles",
+      "test pages",
+      "wiki source files"
+    ],
+    "P4": [
+      "build artifacts",
+      "binary outputs",
+      "keys/certificates"
+    ]
+  }
+}

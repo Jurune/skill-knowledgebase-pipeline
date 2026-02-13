@@ -1,0 +1,5 @@
+version: 1
+interface:
+  display_name: Knowledgebase Pipeline
+  short_description: Build and maintain project wiki knowledge base artifacts from source and docs.
+  default_prompt: Create or refresh the project's wiki knowledge base artifacts with structured metadata, glossary normalization, and readable markdown outputs.
