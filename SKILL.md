@@ -1,6 +1,6 @@
 ---
 name: knowledgebase-pipeline
-description: Build and maintain a reusable project knowledge-base pipeline that outputs structured wiki artifacts from source code and documents. Use when user asks to create, update, normalize, or operationalize project knowledge base assets (reading todo, feature breakdown, metadata schema records, glossary, and readable markdown views), including cross-project reuse with configurable inputs.
+description: Builds and maintains a reusable project knowledge-base pipeline that outputs structured wiki artifacts from source code and documents. Activates when the user asks to create, update, normalize, or operationalize project knowledge base assets (reading todo, feature breakdown, metadata schema records, glossary, and readable markdown views), including cross-project reuse with configurable inputs.
 ---
 
 # Knowledgebase Pipeline
@@ -42,26 +42,23 @@ If config is missing, create one from `assets/templates/kb.config.template.json`
 
 ## Run Pipeline
 
-1. Inventory files under `project_root`, applying `exclude_paths`.
-2. Build priority reading list and write `output_dir/READING_TODO.md`.
-3. Decompose product functions by configured taxonomy and write `output_dir/功能拆解.md`.
-4. Initialize or load `output_dir/metadata.json` using schema version.
-5. Read files in priority order; after each file (or small batch), update affected feature entries in `metadata.json`.
-6. Maintain field naming map in `output_dir/field_glossary.json`.
-7. Generate `output_dir/metadata.md` from `metadata.json + field_glossary.json`.
-8. Run validation checks and report unresolved items.
+Copy this checklist and check off steps as you complete them:
+
+```
+Pipeline Progress:
+- [ ] Step 1: Inventory files under project_root, apply exclude_paths
+- [ ] Step 2: Build priority reading list → write output_dir/READING_TODO.md
+- [ ] Step 3: Decompose product functions → write output_dir/功能拆解.md
+- [ ] Step 4: Initialize or load output_dir/metadata.json
+- [ ] Step 5: Read files in priority order; update metadata.json after each file/batch
+- [ ] Step 6: Maintain field naming map in output_dir/field_glossary.json
+- [ ] Step 7: Generate output_dir/metadata.md from metadata.json + field_glossary.json
+- [ ] Step 8: Run validation checks and report unresolved items
+```
 
 ## Apply Metadata Rules
 
-For each feature record, keep:
-- `code`, `title`, `journey`
-- `feature`: `summary`, `entry`, `details[]`
-- `field[]`
-- `rule[]`
-- `requirement[]`
-- `experience_note[]`
-- `artifacts[]` (optional)
-- `field_kind_map{}` (optional)
+See [references/schema.md](references/schema.md) for the complete feature record structure and JSON examples.
 
 Classify correctly:
 - `Field`: runtime state, mutable data, decision-driving values
