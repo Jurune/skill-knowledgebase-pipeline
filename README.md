@@ -48,6 +48,18 @@
 校验规则见：`references/checklist.md`
 元数据规范见：`references/schema.md`
 
+## 版本管理
+
+版本号遵循 `MAJOR.MINOR.PATCH` 语义化版本规范：
+
+- **MAJOR**：工作流结构或产物格式的破坏性变更（如 schema 字段重命名、产物文件结构调整）
+- **MINOR**：新增功能或规则，向后兼容（如新增 priority 规则、新增产物类型）
+- **PATCH**：措辞修正、说明补充、示例更新等非功能性调整
+
+变更历史见 [CHANGELOG.md](CHANGELOG.md)。
+
+> 在 Anthropic Skills API 中部署时，建议生产环境固定版本号（epoch timestamp），开发环境使用 `”latest”`。
+
 ## 说明
 
-本仓库提供的是“方法与模板”，不包含任何具体业务项目的私有知识数据。
+本仓库提供的是”方法与模板”，不包含任何具体业务项目的私有知识数据。

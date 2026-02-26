@@ -1,6 +1,6 @@
 ---
 name: knowledgebase-pipeline
-description: Build and maintain a reusable project knowledge-base pipeline that outputs structured wiki artifacts from source code and documents. Use when user asks to create, update, normalize, or operationalize project knowledge base assets (reading todo, feature breakdown, metadata schema records, glossary, and readable markdown views), including cross-project reuse with configurable inputs.
+description: Use when asked to build or refresh a project knowledge base from source code and documentation. Covers first-time setup, incremental updates, metadata normalization, and glossary management for any software project.
 ---
 
 # Knowledgebase Pipeline
